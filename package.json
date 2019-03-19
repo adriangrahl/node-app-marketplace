@@ -22,7 +22,8 @@
     "youch": "^2.0.10"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "deploy": "node src/index.js"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
