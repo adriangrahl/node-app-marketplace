@@ -1,7 +1,7 @@
 const Ad = require('../models/Ad')
 const Purchase = require('../models/Purchase')
 const User = require('../models/User')
-const Queue = require('../services/Queue')
+// const Queue = require('../services/Queue')
 const PurchaseMail = require('../jobs/PurchaseMail')
 
 class PurchaseController {
@@ -32,11 +32,11 @@ class PurchaseController {
 
     const purchase = await Purchase.create({ ...req.body })
 
-    Queue.create(PurchaseMail.key, {
-      ad: purchaseAd,
-      user,
-      content
-    }).save()
+    // Queue.create(PurchaseMail.key, {
+    //   ad: purchaseAd,
+    //   user,
+    //   content
+    // }).save()
 
     return res.json(purchase)
   }
